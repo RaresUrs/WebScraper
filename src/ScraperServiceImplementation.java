@@ -3,7 +3,6 @@ import com.jaunt.Elements;
 import com.jaunt.JauntException;
 import com.jaunt.UserAgent;
 
-import java.util.HashSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -12,8 +11,6 @@ public class ScraperServiceImplementation implements ScraperServiceInterface {
     @Override
     public String scrap(String url) {
         Scraper scraper = new Scraper(url);
-        HashSet<String> elements = new HashSet<>();
-
         try {
             UserAgent userAgent = new UserAgent();
             userAgent.visit(scraper.getUrlToScrap());
@@ -42,15 +39,17 @@ public class ScraperServiceImplementation implements ScraperServiceInterface {
                         .findFirst("<p class=\"pricePerUnit\">\n")
                         .getText();
 
+                userAgent.visit(urlStrip(urlToVisit)).findFirst("<div class");
             }
+
         } catch (JauntException e) {
             System.err.println(e);
         }
         return "Hello";
     }
 
-    private String removeWhiteSpaces(String title) {
-        return title.trim().replaceAll("\\s+", " ");
+    private String removeWhiteSpaces(String string) {
+        return string.trim().replaceAll("\\s+", " ");
     }
 
     private String urlStrip(String url) {
