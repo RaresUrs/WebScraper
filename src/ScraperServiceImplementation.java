@@ -34,12 +34,16 @@ public class ScraperServiceImplementation implements ScraperServiceInterface {
                         .findFirst("<p class=\"pricePerUnit\">\n")
                         .getText();
 
-                elements.add(title.trim().replaceAll("\\s+", " "));
-                elements.add(price.trim().replaceAll("\\s+", " "));
+                elements.add(removeWhiteSpaces(title));
+                elements.add(removeWhiteSpaces(price));
             }
         } catch (JauntException e) {
             System.err.println(e);
         }
         return "Hello";
+    }
+
+    private String removeWhiteSpaces(String title) {
+        return title.trim().replaceAll("\\s+", " ");
     }
 }

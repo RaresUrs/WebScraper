@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c79867fe-ae93-46eb-84ea-11765c8b9b2c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/ScraperServiceImplementation.java" />
+      <change beforePath="$PROJECT_DIR$/src/ScraperServiceImplementation.java" afterPath="$PROJECT_DIR$/src/ScraperServiceImplementation.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -14,11 +14,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ScraperServiceImplementation.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ScraperServiceImplementation.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ScraperServiceImplementation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="684">
+              <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+              <folding>
+                <element signature="e#1711#1712#0" expanded="true" />
+                <element signature="e#1770#1771#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Scraper.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Scraper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -104,6 +117,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="extract.method.default.visibility" value="private" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -212,12 +226,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1523863576165</updated>
-      <workItem from="1523863579651" duration="152000" />
+      <workItem from="1523863579651" duration="269000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152000" />
+    <option name="totallyTimeSpent" value="269000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2102" y="-4" width="1869" height="1084" extended-state="6" />
@@ -264,8 +278,19 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/ScraperServiceImplementation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="684">
+          <caret line="43" column="5" lean-forward="true" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+          <folding>
+            <element signature="e#1711#1712#0" expanded="true" />
+            <element signature="e#1770#1771#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Scraper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" lean-forward="false" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
           <folding />
         </state>
       </provider>
