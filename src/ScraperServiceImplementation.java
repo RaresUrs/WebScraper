@@ -4,6 +4,8 @@ import com.jaunt.JauntException;
 import com.jaunt.UserAgent;
 
 import java.util.HashSet;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class ScraperServiceImplementation implements ScraperServiceInterface {
 
@@ -25,6 +27,12 @@ public class ScraperServiceImplementation implements ScraperServiceInterface {
                         .findFirst("<a href")
                         .getText();
 
+                String urlToVisit = item
+                        .findFirst("<div class=\"productInfo\"")
+                        .findFirst("<div class=\"productNameAndPromotions\"")
+                        .findFirst("<h3>")
+                        .findFirst("<a href").outerHTML();
+
                 String price = item
                         .findFirst("<div class=\"addToTrolleytabBox\"")
                         .findFirst("<div class=\"addToTrolleytabContainer addItemBorderTop\">\n")
@@ -34,8 +42,6 @@ public class ScraperServiceImplementation implements ScraperServiceInterface {
                         .findFirst("<p class=\"pricePerUnit\">\n")
                         .getText();
 
-                elements.add(removeWhiteSpaces(title));
-                elements.add(removeWhiteSpaces(price));
             }
         } catch (JauntException e) {
             System.err.println(e);
@@ -45,5 +51,12 @@ public class ScraperServiceImplementation implements ScraperServiceInterface {
 
     private String removeWhiteSpaces(String title) {
         return title.trim().replaceAll("\\s+", " ");
+    }
+
+    private String urlStrip(String url) {
+        final Pattern pattern = Pattern.compile("<a href=\"(.+?)\">");
+        final Matcher matcher = pattern.matcher(url);
+        matcher.find();
+        return matcher.group(1);
     }
 }
