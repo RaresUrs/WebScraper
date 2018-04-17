@@ -1,7 +1,7 @@
 public class ProductDetails {
     String description;
     String title;
-    int unitPrice;
+    double unitPrice;
     String kCalories;
 
 
@@ -21,11 +21,11 @@ public class ProductDetails {
         this.title = title;
     }
 
-    public int getUnitPrice() {
+    public double getUnitPrice() {
         return unitPrice;
     }
 
-    public void setUnitPrice(int unitPrice) {
+    public void setUnitPrice(double unitPrice) {
         this.unitPrice = unitPrice;
     }
 
